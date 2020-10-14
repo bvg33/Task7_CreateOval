@@ -1,0 +1,8 @@
+2020-10-13 21:00:33 ERROR OvalCreator:34 - Invalid coordinates:1 2 3 4 5
+2020-10-13 21:00:33 ERROR OvalCreator:34 - Invalid coordinates:1   2 3 4
+2020-10-13 21:00:33 ERROR OvalCreator:34 - Invalid coordinates:1z 2 3 4
+2020-10-13 21:00:33 ERROR OvalCreator:34 - Invalid coordinates:12 3 4
+2020-10-13 21:00:56 INFO  OvalCreator:34 - Invalid coordinates:1 2 3 4 5
+2020-10-13 21:00:56 INFO  OvalCreator:34 - Invalid coordinates:1   2 3 4
+2020-10-13 21:00:56 INFO  OvalCreator:34 - Invalid coordinates:1z 2 3 4
+2020-10-13 21:00:56 INFO  OvalCreator:34 - Invalid coordinates:12 3 4
