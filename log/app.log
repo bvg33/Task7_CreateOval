@@ -6,3 +6,5 @@
 2020-10-13 21:00:56 INFO  OvalCreator:34 - Invalid coordinates:1   2 3 4
 2020-10-13 21:00:56 INFO  OvalCreator:34 - Invalid coordinates:1z 2 3 4
 2020-10-13 21:00:56 INFO  OvalCreator:34 - Invalid coordinates:12 3 4
+2020-10-15 20:42:09 INFO  OvalCreator:34 - Invalid coordinates:4 2 7 1
+2020-10-15 20:54:25 INFO  OvalCreator:35 - Invalid coordinates:4 2 7 1

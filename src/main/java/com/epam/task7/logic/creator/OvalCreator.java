@@ -1,7 +1,6 @@
 package com.epam.task7.logic.creator;
 
 import com.epam.task7.data.DataReader;
-import com.epam.task7.data.FileDataReader;
 import com.epam.task7.exceptions.DataException;
 import com.epam.task7.logic.parser.Parser;
 import com.epam.task7.logic.validator.Validator;
@@ -13,13 +12,15 @@ import java.util.List;
 
 public class OvalCreator implements Creator<Oval> {
     private Parser <Oval> parser;
-    private Validator <String> validator;
+    private Validator  lineValidator;
     private DataReader reader;
+    private Validator coordinatesValidator;
     private static final Logger LOGGER=Logger.getLogger(OvalCreator.class);
-    public OvalCreator(Parser parser, Validator validator, DataReader reader) {
+    public OvalCreator(Parser parser, Validator lineValidator, DataReader reader,Validator coordinatesValidator) {
         this.parser = parser;
-        this.validator = validator;
+        this.lineValidator = lineValidator;
         this.reader=reader;
+        this.coordinatesValidator=coordinatesValidator;
     }
 
     @Override
@@ -27,7 +28,7 @@ public class OvalCreator implements Creator<Oval> {
         List<String> lines=reader.readLines();
         List<Oval>ovals=new ArrayList<>();
         for(String line:lines){
-            if(validator.isValid(line)){
+            if(lineValidator.isValid(line) && coordinatesValidator.isValid(line)){
                 Oval oval=parser.parse(line);
                 ovals.add(oval);
             }else {

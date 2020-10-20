@@ -1,42 +1,46 @@
 package com.epam.task7.model;
 
+import java.util.Objects;
+
 public class OvalParameters {
-    private double minorAxis;
-    private double majorAxis;
-    private double pointOneX;
-    private double pointOneY;
-    private double pointTwoX;
-    private double pointTwoY;
-    public OvalParameters(double minorAxis, double majorAxis,Point pointOne,Point pointTwo) {
-        this.minorAxis = minorAxis;
-        this.majorAxis = majorAxis;
-        pointOneX=pointOne.getX();
-        pointOneY=pointOne.getY();
-        pointTwoX=pointTwo.getX();
-        pointTwoY=pointTwo.getY();
+
+    private double area;
+    private double perimeter;
+
+    public OvalParameters(double area, double perimeter) {
+        this.area = area;
+        this.perimeter = perimeter;
     }
 
-    public double getMinorAxis() {
-        return minorAxis;
+    public double getArea() {
+        return area;
     }
 
-    public double getMajorAxis() {
-        return majorAxis;
+    public double getPerimeter() {
+        return perimeter;
     }
 
-    public double getPointOneX() {
-        return pointOneX;
+    @Override
+    public String toString() {
+        return "OvalParameters{" +
+                "area=" + area +
+                ", perimeter=" + perimeter +
+                '}';
     }
 
-    public double getPointOneY() {
-        return pointOneY;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        OvalParameters that = (OvalParameters) o;
+        return Double.compare(that.area, area) == 0 &&
+                Double.compare(that.perimeter, perimeter) == 0;
     }
 
-    public double getPointTwoX() {
-        return pointTwoX;
-    }
-
-    public double getPointTwoY() {
-        return pointTwoY;
+    @Override
+    public int hashCode() {
+        return Objects.hash(area, perimeter);
     }
 }

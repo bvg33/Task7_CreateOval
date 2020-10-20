@@ -19,6 +19,14 @@ public class Oval {
         return pointTwo;
     }
 
+    public void setPointOne(Point pointOne) {
+        this.pointOne = pointOne;
+    }
+
+    public void setPointTwo(Point pointTwo) {
+        this.pointTwo = pointTwo;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

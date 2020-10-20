@@ -1,12 +1,10 @@
 package com.epam.task7.logic.validator;
 
-import com.epam.task7.logic.validator.CoordinatesValidator;
-import com.epam.task7.logic.validator.Validator;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class TestCoordinatesValidator {
-    private final Validator <String> validator=new CoordinatesValidator();
+    private final Validator validator=new CoordinatesValidator();
     @Test
     public void testIsValidShouldReturnTrueWhenLinesAreValid(){
         String actualStringOne="4 2 7 1";
@@ -21,9 +19,9 @@ public class TestCoordinatesValidator {
     }
     @Test
     public void testIsValidShouldReturnFalseWhenLinesAreNotValid(){
-        String actualStringOne="4 2 7 1 5";
-        String actualStringTwo="-4 8 -2";
-        String actualStringThree="-1 -2z 0 -4";
+        String actualStringOne="4 2 3 1";
+        String actualStringTwo="-4 2 -2 4";
+        String actualStringThree="-1 -7 0 -4";
         boolean actualOne= validator.isValid(actualStringOne);
         boolean actualTwo= validator.isValid(actualStringTwo);
         boolean actualThree= validator.isValid(actualStringThree);
